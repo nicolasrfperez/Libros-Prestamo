@@ -1,0 +1,67 @@
+
+<div class="row">
+    <div class="col-12 text-center">
+    
+
+        <h2>Formulario para cargar un nuevo libro</h2>
+
+    </div>
+</div>
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 text-center">
+
+
+    <form (ngSubmit) = "guardar()">
+
+        <div class="form-group row">
+            <label for="name" class="col-sm-3 col-form-label col-form-label-sm">Nombre</label>
+                <div class="col-sm-9">
+                <input type="text" name="name" id="name" class="form-control form-control-sm" [(ngModel)]="name">
+            </div>
+        </div>
+        
+        
+       <div class="form-group row">
+            <label for="gender" class="col-sm-3 col-form-label col-form-label-sm">Genero</label>
+            <div class="col-sm-9">
+                <select name="genders" [(ngModel)]="genders" class="form-control"> 
+                    <option *ngFor="let _gender of genders" [value]="_gender.id">{{_gender.name}}</option> 
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="author" class="col-sm-3 col-form-label col-form-label-sm">Autor</label>
+                <div class="col-sm-9">
+                <input type="text" name="author" id="author" class="form-control form-control-sm" [(ngModel)]="author">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="lended" class="col-sm-3 col-form-label col-form-label-sm">Prestado</label>
+                <div class="col-sm-9">
+                <input type="text" name="lended" id="lended" class="form-control form-control-sm" [(ngModel)]="lended">
+            </div>
+        </div>
+        
+        
+
+        <button class="btn btn-warning btn-sm" type="submit">Enviar</button>
+
+        </form>
+
+    </div>
+    <div class="col-3"></div>
+
+</div>
+
+
+<!--
+<div class="form-group row">
+    <label for="ibcn" class="col-sm-3 col-form-label col-form-label-sm">IBCN</label>
+        <div class="col-sm-9">
+        <input type="text" name="ibcn" id="ibcn" class="form-control form-control-sm" [(ngModel)]="ibcn">
+    </div>
+</div>
+-->
